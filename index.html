@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>cotizador</title>
+  </head>
+  <body ng-app="myApp">
+    <header id="header">
+      <div class="ed-container alto100 cross-center">
+        <div class="ed-item web-50">
+          <h2>COTIZADOR</h2>
+        </div>
+        <div class="ed-item web-25">
+          <h3>$99.55</h3>
+        </div>
+        <div class="ed-item web-25 main-end">
+          <figure><img src="img/Cotizador.png" alt=""></figure>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="section1">
+        <div ng-controller="formularioCtrl" class="ed-container">
+          <div class="ed-item web-50 no-padding">
+            <div class="ed-container item-pestana">
+              <div ng-class="{'power':(selected == 1)}" ng-click="selected=1" class="ed-item web-50 pestana">
+                <h1>ARTICULOS</h1>
+              </div>
+              <div ng-class="{'power':(selected == 2)}" ng-click="selected=2" class="ed-item web-50 pestana">
+                <h1>FORMAS DE PAGO</h1>
+              </div>
+            </div>
+            <div ng-show="selected==1" class="ed-container buscador">
+              <div class="ed-item abcenter no-padding">
+                <div class="input articulo">
+                  <input type="search" placeholder="Buscar">
+                </div>
+              </div><a href="javascript:void(0)" ng-click="mostrar=1" class="ed-item justify articulo">
+                <div class="texto">
+                  <p>7</p>
+                  <p>Nombre Articulo: Alivialiv</p>
+                </div>
+                <figure><img src="img/pack.png" alt=""></figure></a><a href="javascript:void(0)" ng-click="mostrar=2" class="ed-item justify articulo">
+                <div class="texto">
+                  <p>7</p>
+                  <p>Nombre Articulo: Alivialiv</p>
+                </div>
+                <figure><img src="img/pack.png" alt=""></figure></a>
+            </div>
+            <div ng-show="selected==2" class="ed-container buscador">
+              <div class="ed-item justify articulo">
+                <div class="texto">
+                  <p>7</p>
+                  <p>Nombre Articulo: pepe</p>
+                </div>
+                <figure><img src="img/pack.png" alt=""></figure>
+              </div>
+              <div class="ed-item justify articulo">
+                <div class="texto">
+                  <p>7</p>
+                  <p>Nombre Articulo: pepe</p>
+                </div>
+                <figure><img src="img/pack.png" alt=""></figure>
+              </div>
+              <div class="ed-item justify articulo">
+                <div class="texto">
+                  <p>7</p>
+                  <p>Nombre Articulo: pepe</p>
+                </div>
+                <figure><img src="img/pack.png" alt=""></figure>
+              </div>
+            </div>
+          </div>
+          <div class="ed-item web-50 no-padding ladoDerecho">
+            <div class="ed-container">
+              <div ng-show="mostrar==1" class="ed-item">
+                <h4>titulo 1</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt deserunt odio aspernatur tenetur modi perspiciatis, voluptatem nihil ipsum, hic sint sed nesciunt harum aliquam placeat atque repellendus? Sapiente, earum, odit.</p>
+              </div>
+              <div ng-show="mostrar==2" class="ed-item">
+                <h4>titulo 2</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam doloribus dolorem libero, iusto quasi, odit velit nam provident aut autem dicta, saepe sit asperiores! Fugiat maxime, mollitia! Accusamus, consectetur, illo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/isMobile.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

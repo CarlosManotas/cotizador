@@ -1,0 +1,80 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="format-detection", content="telephone=no")
+    link(rel="icon", href="img/favicon.png")
+    link(rel="stylesheet", href="css/styles.css")
+    title cotizador
+  body(ng-app="myApp")
+    header#header
+      .ed-container.alto100.cross-center
+        .ed-item.web-50
+          h2 COTIZADOR
+        .ed-item.web-25
+          h3 $99.55
+        .ed-item.web-25.main-end
+          figure
+            img(src="img/Cotizador.png", alt="")
+    main
+      section#section1
+        .ed-container(ng-controller='formularioCtrl')
+          .ed-item.web-50.no-padding
+            .ed-container.item-pestana
+              .ed-item.web-50.pestana(ng-class="{'power':(selected == 1)}" ng-click='selected=1')
+                h1 ARTICULOS
+              .ed-item.web-50.pestana(ng-class="{'power':(selected == 2)}" ng-click='selected=2')
+                h1 FORMAS DE PAGO
+            .ed-container.buscador(ng-show='selected==1')
+              .ed-item.abcenter.no-padding
+                .input.articulo
+                  input(type="search", placeholder="Buscar")
+              
+              a.ed-item.justify.articulo(href="javascript:void(0)" ng-click ="mostrar=1")
+                .texto
+                  p 7
+                  p Nombre Articulo: Alivialiv
+                figure
+                  img(src="img/pack.png", alt="")
+              a.ed-item.justify.articulo(href="javascript:void(0)" ng-click ="mostrar=2")
+                .texto
+                  p 7
+                  p Nombre Articulo: Alivialiv
+                figure
+                  img(src="img/pack.png", alt="")              
+            .ed-container.buscador(ng-show='selected==2')
+              .ed-item.justify.articulo
+                .texto
+                  p 7
+                  p Nombre Articulo: pepe
+                figure
+                  img(src="img/pack.png", alt="")
+              .ed-item.justify.articulo
+                .texto
+                  p 7
+                  p Nombre Articulo: pepe
+                figure
+                  img(src="img/pack.png", alt="")
+              .ed-item.justify.articulo
+                .texto
+                  p 7
+                  p Nombre Articulo: pepe
+                figure
+                  img(src="img/pack.png", alt="")
+          
+          .ed-item.web-50.no-padding.ladoDerecho
+            .ed-container
+              .ed-item(ng-show="mostrar==1")
+                h4 titulo 1
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt deserunt odio aspernatur tenetur modi perspiciatis, voluptatem nihil ipsum, hic sint sed nesciunt harum aliquam placeat atque repellendus? Sapiente, earum, odit.
+              .ed-item(ng-show="mostrar==2")
+                h4 titulo 2
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam doloribus dolorem libero, iusto quasi, odit velit nam provident aut autem dicta, saepe sit asperiores! Fugiat maxime, mollitia! Accusamus, consectetur, illo.
+
+
+    script(src="js/isMobile.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js")
+    script(src="js/scripts.js")
+    script(src="js/app.js")
